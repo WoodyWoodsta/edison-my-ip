@@ -5,8 +5,9 @@
 var publicIp = require('public-ip');
 var github = require('octonode');
 var fs = require('fs');
+var path = require('path');
 
-var config = JSON.parse(fs.readFileSync('./config.json'));
+var config = JSON.parse(fs.readFileSync(path.join(__dirname, './config.json')));
 
 findIp(config.gistId);
 
