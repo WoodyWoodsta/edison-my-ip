@@ -60,7 +60,6 @@ function pushIp(ip, gistId) {
     if (err) {
       console.log('[edison-my-ip] - Edit gist attempt failed');
 
-      fs.writeFileSync('edison-my-ip-log.txt', `The push failed with error:\n${err}`);
     } else {
       console.log('[edison-my-ip] - Gist edit successful');
     }
